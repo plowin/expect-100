@@ -1,0 +1,11 @@
+---
+applications:
+  - name: expect-100
+    buildpacks:
+      - go_buildpack
+    routes:
+      - route: myapp.com
+    instances: 1
+    memory: 16M
+    env:
+      GOVERSION: go1.22
