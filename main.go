@@ -44,7 +44,7 @@ func expectHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// An example to work with 100-continue, restrict the content-contentLength to some value
+	// An example to work with 100-continue, restrict the Content-Length to some value
 	if contentLength > MaxContentLength {
 		http.Error(w, "Content size is too large", http.StatusRequestEntityTooLarge)
 		return
